@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Lesson4" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Lesson4" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/opt/vc/include" />
+					<Add directory="/opt/vc/include/interface/vmcs_host/linux" />
+					<Add directory="/opt/vc/include/interface/vcos/pthreads" />
+					<Add directory="/opt/vc/include/interface" />
+					<Add directory="/home/pi/stb" />
+					<Add directory="Headers" />
+				</Compiler>
+				<Linker>
+					<Add library="bcm_host" />
+					<Add library="GLESv2_static" />
+					<Add library="EGL_static" />
+					<Add library="vchiq_arm" />
+					<Add library="vcos" />
+					<Add library="khrn_static" />
+					<Add library="pthread" />
+					<Add directory="/opt/vc/lib" />
+					<Add directory="/usr/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Lesson4" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Game.cpp" />
+		<Unit filename="Game.h" />
+		<Unit filename="MagPiHelloTriangle.cpp" />
+		<Unit filename="OGL.cpp" />
+		<Unit filename="OGL.h" />
+		<Unit filename="SimpleObj.cpp" />
+		<Unit filename="SimpleObj.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

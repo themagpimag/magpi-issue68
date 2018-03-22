@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Lesson3" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Lesson3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/opt/vc/include" />
+					<Add directory="/opt/vc/include/interface/vmcs_host/linux" />
+					<Add directory="/opt/vc/include/interface/vcos/pthreads" />
+					<Add directory="/home/pi/stb" />
+					<Add directory="/opt/vc/include/interface" />
+					<Add directory="Headers" />
+				</Compiler>
+				<Linker>
+					<Add library="/opt/vc/lib/libbcm_host.so" />
+					<Add library="/opt/vc/lib/libEGL_static.a" />
+					<Add library="/opt/vc/lib/libGLESv2_static.a" />
+					<Add library="/opt/vc/lib/libkhrn_static.a" />
+					<Add library="/opt/vc/lib/libvchiq_arm.so" />
+					<Add library="/opt/vc/lib/libvcos.so" />
+					<Add library="/usr/lib/arm-linux-gnueabihf/libpthread.so" />
+					<Add directory="/opt/vc/lib" />
+					<Add directory="/usr/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Lesson3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Headers/Game.h" />
+		<Unit filename="Headers/OGL.h" />
+		<Unit filename="Headers/SimpleObj.h" />
+		<Unit filename="Source/Game.cpp" />
+		<Unit filename="Source/MagPiHelloTriangle.cpp" />
+		<Unit filename="Source/OGL.cpp" />
+		<Unit filename="Source/SimpleObj.cpp" />
+		<Unit filename="images/MagPicomp.png" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
